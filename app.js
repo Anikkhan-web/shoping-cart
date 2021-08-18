@@ -1,1 +1,26 @@
-console.log('I am in a separate file')
+function updateCaseNumber(isIncreasing){
+
+    const caseInput = document.getElementById('case-number');
+    const caseNumber = caseInput.value;
+    
+  if(isIncreasing){
+    caseInput.value = parseInt(caseInput.value)+ 1;
+    
+  }else{
+    caseInput.value = parseInt(caseInput.value) - 1;
+
+  }
+}
+
+
+
+
+document.getElementById('case-plus').addEventListener('click',function(){
+    updateCaseNumber(true);
+
+})
+
+document.getElementById('case-minus').addEventListener('click',function(){ 
+    updateCaseNumber(false);
+
+})
